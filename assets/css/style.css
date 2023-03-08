@@ -165,7 +165,7 @@ h6 {
   height: 2px;
   bottom: 3px;
   left: 0;
-  background-color: #36beec;
+  background-color: #268dfb;
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -219,7 +219,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #1f86e0;
+  color: #1bac91;
 }
 
 .navbar .dropdown:hover>ul {
@@ -371,7 +371,7 @@ h6 {
 #hero {
   width: 100%;
   height: calc(100vh - 70px);
-  background: url("https://remoteaviation.com.au/wp-content/uploads/2017/01/Inspire1.jpeg") center center;
+  background: url("https://1.bp.blogspot.com/-j5genXMFml4/YDmrJzGVP1I/AAAAAAABHzw/v95LjEuRlCMRno62gMEfdUigFn4eXTpOwCLcBGAsYHQ/s2560/city_aerial_view_buildings_200068_2560x1440.jpg") center center;
   background-size: cover;
   position: relative;
   margin-top: 70px;
@@ -396,11 +396,11 @@ h6 {
   font-size: 60px;
   font-weight: 900;
   line-height: 56px;
-  color: #650303;
+  color: #7abaff;
 }
 .abc {
   font-size: 25px;
-  color: #470303;
+  color: #8fcdff;
   opacity: 0.5;
 }
 
@@ -421,7 +421,7 @@ h6 {
   padding: 8px 28px;
   border-radius: 4px;
   transition: 0.5s;
-  border: 5px solid #ea5151;
+  border: 5px solid #8fc2ff;
   color: #fff;
   margin-bottom: 60px;
   margin-right: 43px;
@@ -643,12 +643,12 @@ section {
   border: 0;
   padding: 20px;
   transition: 0.3s;
-  color: #21413c;
+  color: #7abaff;
   
 }
 
 .features .nav-link:hover {
-  color: #1bac91;
+  color: #268dfb;
 }
 
 .features .nav-link h4 {
@@ -666,7 +666,7 @@ section {
 }
 
 .features .nav-link.active h4 {
-  color: #1bac91;
+  color: #268dfb;
 }
 
 .features .tab-pane.active {
@@ -697,7 +697,7 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-/* .services .icon-box {
+.services .icon-box {
   padding: 30px;
   position: relative;
   overflow: hidden;
@@ -749,7 +749,7 @@ section {
 
 .services .icon-box-blue .icon i {
   color: #2282ff;
-} */
+}
 
 /*--------------------------------------------------------------
 # Testimonials
@@ -1411,12 +1411,13 @@ section {
   
 }
 #services .box{ 
-  border: 2px solid brown;
+  border: 2px solid #64a7ff;
   padding: 34px;
   margin: 2px 55px;
-  border-radius: 28px;
-  background: #f2f2f2;
+  /* border-radius: 28px; */
+  background: rgba(242, 242, 242, 0.25);
   margin-bottom: 20px;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
 #services .box img{ 
@@ -1506,51 +1507,3 @@ section {
 }
 
 
-
-/* Navigation */
-#navbar {
-  flex-direction: column;
-}
-
-#navbar ul li a{
-  font-size: 1rem;
-  padding: 0px 7px;
-  padding-bottom: 8px;
-}
-
-/* Services section 
-#services{
-  flex-direction: column-reverse;
-}
-
-#services .box { 
-  padding: 14px;
-  margin: 2px 0px; 
-  margin-bottom: 20px;
-} */
-
-
-
-#services{
-  margin: 34px;
-  display: flex;
-}
-#services .box{ 
-  border: 2px solid brown;
-  padding: 34px;
-  margin: 2px 55px;
- border-radius:0%;
-  background: #f2f2f2;
-  margin-bottom: 20px;
-}
-
-#services .box img{ 
- height: 160px;
- margin: auto;
- display: block;
-}
-
-#services .box p{
-  font-family: 'Bree Serif', serif;
-
-} 
