@@ -377,6 +377,65 @@ h6 {
   margin-top: 70px;
   }
 
+
+#team1{
+  width:100%;
+  height: calc(100vh);
+  background: url("assets/img/background1.jpg");
+  background-size: cover;
+  position: relative;
+
+}
+
+#team2{
+  width:100%;
+  height: calc(100vh);
+  background: url("assets/img/background1.jpg");
+  background-size: cover;
+  position: relative;
+  
+
+}
+#team3{
+  width:100%;
+  height: 100%;
+  background: url("assets/img/background1.jpg");
+  background-size: cover;
+  position: relative;
+  
+
+}
+
+#team4{
+  width:100%;
+  height: 100%;
+  background: url("assets/img/background1.jpg");
+  background-size: cover;
+  position: relative;
+  
+
+}
+
+#team5{
+  width:100%;
+  height: 100%;
+  background: url("assets/img/background1.jpg");
+  background-size: cover;
+  position: relative;
+  
+
+}
+
+#team6{
+  width:100%;
+  height: 100%;
+  background: url("assets/img/background1.jpg");
+  background-size: cover;
+  position: relative;
+  
+
+}
+
 #hero:before {
   content: "";
   background: rgba(0, 0, 0, 0.4);
@@ -403,7 +462,35 @@ h6 {
   color: #8fcdff;
   opacity: 0.5;
 }
+.head{
+  font-size: 60px;
+  font-weight: 900;
+  color: #111111;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  text-shadow: #371102;
+  
+}
 
+.head1{
+  font-size: 55px;
+  font-weight: 900;
+  color: #111111;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align:center; 
+  text-shadow: #371102;
+
+
+  
+ 
+
+  
+}
+.abc1{
+  font-size: 35px;
+  color: #2a0804;
+  padding: 32px;
+}
 #hero h2 {
   color: #c41414;
   margin-bottom: 35px;
@@ -427,9 +514,53 @@ h6 {
   margin-right: 3px;
 }
 
+#team1 .btn-get-started1 {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 4px;
+  transition: 0.5s;
+  border: 5px solid #0f161e;
+  color: #f8f2f2;
+  margin-bottom: 60px;
+  margin-right: 3px;
+  background: #032b60;
+}
+
+#hero8 .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 4px;
+  transition: 0.5s;
+  border: 5px solid #0f161e;
+  color: #f8f2f2;
+  margin-bottom: 5px;
+  margin-right: 3px;
+  background: #6da7f4;
+}
+
 #hero .btn-get-started:hover {
   border-color: #268dfb;
   background: #268dfb;
+}
+
+#hero8 .btn-get-started:hover {
+  border-color: #268dfb;
+  background: #268dfb;
+}
+
+#team1 .btn-get-started1:hover {
+  border-color: #200e06;
+  background: #3e1402;
 }
 
 @media (min-width: 1024px) {
@@ -463,8 +594,9 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 0px 0;
+  padding-top: 40px;
   overflow: hidden;
+  
 }
 
 .section-bg {
@@ -484,9 +616,30 @@ section {
   color: #21413c;
 }
 
+.section-title h2.sd {
+  font-size: 36px;
+  font-weight: 300;
+  margin-bottom: -22px;
+  padding-bottom: 0;
+  color: #21413c;
+}
+
 .section-title p {
   margin-bottom: 0;
 }
+
+@media (max-width: 800px){
+    #sk1{
+      width: 90px;
+      height: 85px;
+    }
+
+    }
+
+  
+
+
+
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -1062,9 +1215,12 @@ section {
 .team .member {
   text-align: center;
   margin-bottom: 20px;
-  background: #343a40;
-  position: relative;
+  /* background: #343a40; */
+  position:relative;
   overflow: hidden;
+  margin-top: 20px;
+  
+
 }
 
 .team .member .member-info {
