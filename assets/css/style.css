@@ -14,12 +14,12 @@ body {
 }
 
 a {
-  color: #1bac91;
+  color: #268dfb;
   text-decoration: none;
 }
 
 a:hover {
-  color: #22d8b6;
+  color: #84b0df;
   text-decoration: none;
 }
 
@@ -42,7 +42,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #1bac91;
+  background: #268dfb;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -56,7 +56,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #21cfaf;
+  background: #4795e8;
   color: #fff;
 }
 
@@ -323,7 +323,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #1bac91;
+  color: #268dfb;
 }
 
 .navbar-mobile .getstarted,
@@ -358,7 +358,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-  color: #1bac91;
+  color: #268dfb;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -424,12 +424,12 @@ h6 {
   border: 5px solid #8fc2ff;
   color: #fff;
   margin-bottom: 60px;
-  margin-right: 43px;
+  margin-right: 3px;
 }
 
 #hero .btn-get-started:hover {
-  border-color: #1bac91;
-  background: #1bac91;
+  border-color: #268dfb;
+  background: #268dfb;
 }
 
 @media (min-width: 1024px) {
@@ -448,7 +448,7 @@ h6 {
 @media (max-width: 768px) {
   #hero h1 {
     font-size: 60px;
-    line-height: 36px;
+    line-height: 65px;
     font-weight: 900;
   }
 
@@ -472,7 +472,7 @@ section {
 }
 
 .section-title {
-  padding-bottom: 40px;
+  padding-bottom: 4px;
   text-align: center;
 }
 
@@ -570,7 +570,7 @@ section {
 .about .icon-box i {
   font-size: 48px;
   float: left;
-  color: #1bac91;
+  color: #268dfb;
 }
 
 .about .icon-box h4 {
@@ -608,7 +608,7 @@ section {
   display: block;
   font-size: 24px;
   font-weight: 400;
-  color: #1bac91;
+  color: #268dfb;
 }
 
 .steps .content-item h4 {
@@ -866,7 +866,7 @@ section {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: #1bac91;
+  color: #268dfb;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -966,7 +966,7 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: #4ae3c6;
+  color: #7cb6f4;
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -1012,11 +1012,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #1bac91;
+  border: 1px solid #268dfb;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #1bac91;
+  background-color: #268dfb;
 }
 
 .portfolio-details .portfolio-info {
@@ -1118,7 +1118,7 @@ section {
 }
 
 .team .member .social a:hover {
-  color: #1bac91;
+  color: #268dfb;
 }
 
 .team .member .social i {
@@ -1207,7 +1207,7 @@ section {
 }
 
 .faq .faq-list a.collapsed:hover {
-  color: #1bac91;
+  color: #268dfb;
 }
 
 .faq .faq-list a.collapsed .icon-show {
@@ -1236,7 +1236,7 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #1bac91;
+  color: #268dfb;
   float: left;
   width: 44px;
   height: 44px;
@@ -1260,7 +1260,7 @@ section {
   padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
-  color: #43857a;
+  color: #268dfb;
 }
 
 .contact .info .email p {
@@ -1287,14 +1287,14 @@ section {
 }
 
 .contact .info .social-links a:hover {
-  background: #1bac91;
+  background: #268dfb;
   color: #fff;
 }
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #1bac91;
+  background: #268dfb;
   color: #fff;
 }
 
@@ -1325,7 +1325,7 @@ section {
 .contact .php-email-form .sent-message {
   display: none;
   color: #fff;
-  background: #18d26e;
+  background: #086ad3;
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -1409,7 +1409,10 @@ section {
   margin: 34px;
   display: flex;
   
+
 }
+
+
 #services .box{ 
   border: 2px solid #64a7ff;
   padding: 34px;
@@ -1453,7 +1456,7 @@ section {
 }
 
 .imgab{
-  margin-left: 100px;
+  margin-left: 0px;
 }
 
 .zz{
@@ -1506,4 +1509,16 @@ section {
   height: 100%;
 }
 
+@media(max-width:877px) {
+  .imgab {
+       width: 380px;
+  }
+}
+
+@media(max-width:583px) {
+  .OS {
+       width: 125px;
+       height:100px;
+  }
+}
 
