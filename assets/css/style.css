@@ -1678,3 +1678,39 @@ section {
   }
 }
 
+
+@media(max-width:583px) {
+  .OS1 {
+       width: 125px;
+       height:100px;
+  }
+}
+
+@media(max-width:583px) {
+  .OS2 {
+       width: 125px;
+       height:100px;
+  }
+}
+
+@media(max-width:583px) {
+  .OS3 {
+       width: 125px;
+       height:100px;
+  }
+}
+
+
+.OS1{
+  width: 310px;
+}
+
+
+.OS2{
+  width: 310px;
+}
+
+.OS3{
+  width: 310px;
+}
+
