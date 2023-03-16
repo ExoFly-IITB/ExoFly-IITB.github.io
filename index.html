@@ -41,6 +41,17 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+
+<script src="index.js"></script>
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("7-1GTYQNviRegMwkP");
+   })();
+</script>
+
   <!-- =======================================================
   * Template Name: Maxim - v4.10.0
   * Template URL: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/
@@ -67,8 +78,25 @@
           <li><a class="nav-link scrollto" href="index.html#about">About Us</a></li>
           <li><a class="nav-link scrollto" href="index.html#services">Our Subsystems</a></li>
           <!-- <li><a class="nav-link scrollto " href="index.html#portfolio">Portfolio</a></li> -->
-          <li><a class="nav-link scrollto" href="team.html">Team</a></li>
-        
+          <!-- <li><a class="nav-link scrollto" href="team.html">Team</a></li> -->
+          <li class="dropdown"><a href="team.html"><span>Team</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <!-- <li><a href="team.html#team0">Team Leads</a></li> -->
+              <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li> -->
+              <li><a href="team.html#team3">Business<i class="fa-solid fa-handshake"></i></a></li>
+              <li><a href="team.html#team4">Mechanical <i class="fa-solid fa-screwdriver-wrench"></i></a></li>
+              <li><a href="team.html#team5">Electrical <i class="fa fa-bolt" aria-hidden="true"></i></a></li>
+              <li><a href="team.html#team6">Controls <i class="fa fa-microchip" aria-hidden="true"></i></a></li>
+            </ul>
+          </li>
           <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -139,18 +167,18 @@
       <h1 class="ab">Our Subsystems</h1>
       <div id="services">
           <div class="box">
-              <img src="https://wallpapercave.com/wp/wp3027281.jpg" alt="" class="OS3">
+              <img src="https://wallpapercave.com/wp/wp3027281.jpg" alt="" class="OS3" id="elec">
               <h2 class="abcd">Electrical</h2>
               <p class="center1"> We manage Batteries and Research finding in most efficient motor-propeller configuration.<br> <a href="index.html#features">Read more</a></p>
           </div>
           <div class="box">
-              <img src="https://tse3.mm.bing.net/th?id=OIP.FVomPQ_9rK5zbLKsdGlk5gHaE9&pid=Api&P=0" alt=""  class="OS1">
+              <img src="https://tse3.mm.bing.net/th?id=OIP.FVomPQ_9rK5zbLKsdGlk5gHaE9&pid=Api&P=0" alt=""  class="OS1" id="con">
               <h2 class="abcd">Controls</h2>
               <p class="center1">We act as a bridge between Mechanical and Electrical Subsystem. <br><a href="index.html#features">Read more</a>
              
           </div>
           <div class="box">
-              <img src="https://wallpapercave.com/wp/wp2043480.jpg" alt="" class="OS2">
+              <img src="https://wallpapercave.com/wp/wp2043480.jpg" alt="" class="OS2" id="mech">
               <h2 class="abcd">Mechanical</h2>
               <p class="center1"> We are responsible for Designing and Manufacturing the Device.<br><a href="index.html#features"> Read more</a></p>
           </div>
@@ -600,7 +628,7 @@
     </section><!-- End F.A.Q Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <!-- <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-title" data-aos="fade-up">
@@ -645,13 +673,90 @@
         </div>
 
       </div>
+    </section>End Contact Section -->
+
+
+
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Contact</h2>
+          <p>Send us a mail and we will get back to you as early as possible.</p>
+        </div>
+        <br> 
+
+        <div class="row no-gutters justify-content-center" data-aos="fade-up">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>IIT Bombay,Powai,Mumbai,Maharashtra-400076</p>
+              </div>
+
+              <div class="email mt-4">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>teamleaders.exoflyiitb@gmail.com</p>
+              </div>
+
+              <div class="phone mt-4">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>Sudhansh P: +91 8885922225</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.412100539342!2d72.91107921473055!3d19.13343018705499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7f189efc039%3A0x68fdcea4c5c5894e!2sIndian%20Institute%20of%20Technology%20Bombay!5e0!3m2!1sen!2sin!4v1678993409552!5m2!1sen!2sin" frameborder="0" allowfullscreen></iframe>
+          </div>
+
+        </div>
+
+        <!-- <div class="row mt-5 justify-content-center" data-aos="fade-up">
+          <div class="col-lg-10">
+            <form> <div class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" id="message"placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message">Error</div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit" ><a href="index.html#contact" style="color: azure;">Send Message</a></button></div>
+            </form></div>
+          </div>
+ -->
+
+
+          
+        </div>
+
+      </div>
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
 
 
 
-
+<br><br> <br> <br> <br> <br> 
 
   <div class="footer">
     <div class="waves">
@@ -682,7 +787,7 @@
       <li class="menu__item"><a class="menu__link" href="index.html#contact">Contact</a></li>
 
     </ul>
-    <p>&copy;2021 Nadine Coelho | All Rights Reserved</p>
+    <p>&copy;Exofly Web Team 2023| All Rights Reserved!<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Designed by <bold><a href="https://www.linkedin.com/in/aditya-edlabadkar-23b063228" style="color: rgb(9, 20, 20);"><strong>Aditya</strong></a></bold></p>
   </div>
   
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -775,6 +880,8 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
 
 </body>
 
