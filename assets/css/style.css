@@ -1922,8 +1922,8 @@ section {
 #loader {
   position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 1;
   overflow: visible;
-  background: #131212 url('https://cdn.dribbble.com/users/1658979/screenshots/4502692/media/390192423ad771f4f67b0bea301078f9.gif') no-repeat center center;
+  background: #0a013d url('https://i2.wp.com/codemyui.com/wp-content/uploads/2016/08/circular-water-fill-loading-animation.gif') no-repeat center center;
 }
