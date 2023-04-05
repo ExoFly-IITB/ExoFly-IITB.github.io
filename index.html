@@ -70,6 +70,8 @@
 </head>
 
 <body>
+  <div id="loader"></div>
+  <div id="content">
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
@@ -899,6 +901,13 @@
   gtag('js', new Date());
 
   gtag('config', 'G-CV12TS0L2N');
+</script>
+</div>
+<script>
+  var preloader = document.getElementById('loader');
+  function preLoaderHandler(){
+      preloader.style.display = 'none';
+  }
 </script>
 
 </body>

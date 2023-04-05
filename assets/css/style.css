@@ -1915,3 +1915,12 @@ section {
 /* .img-fluid {
   margin-bottom: 71px;
 } */
+
+
+#loader{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #0d0d0d url('https://cdn.dribbble.com/users/1658979/screenshots/4502692/media/390192423ad771f4f67b0bea301078f9.gif') no-repeat center;
+	z-index: 999;
+}

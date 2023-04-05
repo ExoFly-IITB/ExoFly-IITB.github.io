@@ -34,6 +34,8 @@
 <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
+  <div id="loader"></div>
+  <div id="content">
     <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container d-flex justify-content-between">
     
@@ -890,6 +892,14 @@
   </footer><!-- End Footer -->
     </div>
 
+
+  </div>
+  <script>
+    var preloader = document.getElementById('loader');
+    function preLoaderHandler(){
+        preloader.style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
