@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: linear-gradient(-45deg, #250023, #120124, rgb(31, 9, 1), rgb(42, 1, 39));
+            background-size: 400% 400%;
+            animation: gradient 5s ease infinite;
+            height: 100vh;
+            margin: 0; /* Remove default body margin */
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .flex-column {
+            flex-direction: column;
+        }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        .h-100 {
+            height: 100%;
+        }
+
+        .btn-group {
+            /* Add your button group styles here */
+        }
+
+        .my-5 {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .text-decoration-none {
+            text-decoration: none;
+        }
+    </style>
+    <title>Your Title Here</title>
+</head>
+<body>
+    
+<div class="d-flex flex-column justify-content-center w-100 h-100">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="btn-group my-5">
+            <!-- This div contains buttons or other elements -->
+        </div>
+        <a href="https://manuel.pinto.dev" class="text-decoration-none">
+            <!-- This is a link with no visible content, leading to "https://manuel.pinto.dev" -->
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

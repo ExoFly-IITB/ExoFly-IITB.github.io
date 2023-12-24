@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="team2023files/nav2023.css">
+  
+ 
+
+  
+  
+  <style>
+  /* Reset styles for all elements */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo', sans-serif;
+    
+  }
+  
+  /* Wrapper for centering content */
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+  
+  /* Flex container for columns */
+  .cols {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Individual column style */
+  .col {
+    width: calc(20% - 2rem);
+    margin: 2rem;
+    cursor: pointer;
+  }
+  
+
+  /* Media query for adjusting column width on smaller screens */
+  @media screen and (max-width: 48rem) {
+    .col {
+      width: calc(50% - 2rem);
+    }
+  }
+  
+  /* Media query for making columns full width on even smaller screens */
+  @media screen and (max-width: 32rem) {
+    .col {
+      width: 100%;
+      margin: 0 0 2rem 0;
+    }
+  }
+  
+  /* Hide the back side of the card by default */
+ 
+  
+  /* Global styles for fonts and box-sizing */
+ 
+  
+  /* Font face for custom font */
+  @font-face {
+    font-family: 'Exo';
+    src: url(./fonts/Exo2.0-Medium.otf);
+  }
+  
+  /* Styles for the main container holding profile cards */
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+    padding: 200px;
+  }
+  
+  /* Styles for individual profile cards */
+  .profile-card {
+    position: relative;
+    font-family: sans-serif;
+    width: 220px;
+    height: 220px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #3336;
+    transition: .6s;
+    margin: 0px;
+  }
+  
+  /* Hover effect on profile cards */
+  .profile-card:hover {
+    border-radius: 10px;
+    height: 260px;
+  }
+  
+  /* Styles for the profile image within a card */
+  .profile-card .img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+    z-index: 99;
+  }
+  
+  /* Hover effect on the profile image */
+  .profile-card:hover .img {
+    transform: translateY(-60px);
+  }
+  
+  /* Styles for the actual image inside the profile image container */
+  .img img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #3336;
+    transition: .6s;
+  }
+  
+  /* Hover effect on the image inside the profile card */
+  .profile-card:hover img {
+    border-radius: 10px;
+  }
+  
+  /* Styles for the caption (name, role, and social links) on a profile card */
+  .caption {
+    text-align: center;
+    transform: translateY(-80px);
+    opacity: 0;
+    transition: .6s;
+  }
+  
+  /* Hover effect on the caption */
+  .profile-card:hover .caption {
+    opacity: 1;
+  }
+  
+  /* Styles for the name in the caption */
+  .caption h3 {
+    font-size: 21px;
+    font-family: sans-serif;
+  }
+  
+  /* Styles for the role in the caption */
+  .caption p {
+    font-size: 15px;
+    color: #0c52a1;
+    font-family: sans-serif;
+    margin: 2px 0 9px 0;
+  }
+  
+  /* Styles for social links in the caption */
+  .caption .social-links a {
+    color: #333;
+    margin-right: 15px;
+    font-size: 21px;
+    transition: .6s;
+  }
+  
+  /* Hover effect on social links */
+  .social-links a:hover {
+    color: #0c52a1;
+  }
+  
+  /* Media query for adjusting styles on smaller screens */
+  h1 {
+      text-transform: capitalize;
+      letter-spacing: 0.3px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-size: clamp(2.9375rem, 2.75rem + 0.75vw, 3rem);
+      background-color: #005baa;
+      background-image: linear-gradient(40deg, #005baa, #47105f);
+      background-size: 100%;
+      background-repeat: repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+      text-align: center;
+     
+      margin-top: 10px; /* Adjust the margin to your preference */
+  margin-bottom: 20px; 
+    }
+   
+  
+  
+  /* ... (previous styles) */
+  @media screen and (max-width: 600px) {
+          .main {
+            justify-content: center; /* Center cards on smaller screens */
+            padding: 40px;
+          }
+     
+          .profile-card {
+            width: 70%; /* Adjust the width for smaller screens */
+            margin: 0 0 100px; /* Add margin for spacing between cards */
+            height: 65vw
+
+          }
+        }
+        @media screen and (min-width: 768px) {
+     .profile-card {
+       margin: 10px; /* Adjust the margin for larger screens (laptops) */
+     }
+
+   }
+
+   @media screen and (max-width: 767px) {
+  .col {
+    margin: -2.9rem -0.1rem; /* Adjust the left margin for smaller screens */
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+        text-align: center;
+  }
+}
+   
+.wrapper {
+  text-align: center; /* Center align the content */
+}
+
+h1 {
+  margin-bottom: 55px; /* Add some margin to separate the heading from the columns */
+}
+
+h3{
+    font-family: 'Bungee';
+}
+.l-header {
+            transition: background-color 0.5s, opacity 0.5s;
+        }
+
+        .nav__menu {
+            opacity: 1;
+        }
+</style>  
+
+</head>
+<body>
+  <div>
+  <header class="l-header">
+    <nav class="nav bd-grid">
+        <div>
+            <a href="team2023files/log0.png" class="nav__logo">EXOFLY-IITB</a>
+            
+        </div>
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">HOME</a></li>
+                <li class="nav__item"><a href="index.html" class="nav__link">ABOUT US</a></li>
+                <li class="nav__item"><a href="index.html" class="nav__link">OUR SUBSYSTEMS</a></li>
+                <li class="nav__item"><a href="index.html" class="nav__link">TEAM</a></li>
+                <li class="nav__item"><a href="index.html" class="nav__link">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+            <ion-icon class="nav__icon" name="menu"></ion-icon>
+        </div>
+    </nav>
+</header>
+<script  type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+
+        <!-- MAIN JS -->
+        <script src="team2023files/nav.js"></script>
+</div>
+<div class="wrapper" style="margin-top: 50px;">
+    <h1>Technical Head</h1>
+  <div class="cols">
+    <iframe src="team2023files/bg1.html" frameborder="0" scrolling="no" style="width:100%; height:100vh; position: fixed; top: 0; left: 0; z-index: -1;" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
+    <div class="col" ontouchstart="this.classList.toggle('hover');">
+      <div class="container">
+        <div class="front" >
+            <div class="profile-card">
+                <div class="img">
+                    <img src="exoteam2023/madan.jpeg">
+                </div>
+                <div class="caption">
+                    <h3 style="font-family: 'Bungee';">MADAN</h3>
+                    <p>Team Lead</p>
+                    <div class="social-links">
+                        <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/madan-y-n-250824212/?originalSubdomain=in" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+      </div>
+     
+    </div>
+    </div>
+    <h1>MECHANICAL SUBSYSTEM</h1>
+     <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/sanika.jpeg">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">SANIKA WAGH</h3>
+                          <p>Team Lead</p>
+                          <div class="social-links">
+                              <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/sanika-wagh-217b78226/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/ Kodape Preet Prakash.jpeg">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">PREET KODAPE</h3>
+                          <p>Team Lead</p>
+                          <div class="social-links">
+                              <a href="mailto:preetkodape9420@gmail.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/preet-kodape-648187228/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+    </div>
+    <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/anu.png">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">ANURAG GHANTA</h3>
+                          <p>Team Lead</p>
+                          <div class="social-links">
+                              <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/Utkarsh Jain (1).jpeg">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">UTKARSH</h3>
+                          <p>Junior engineer</p>
+                          <div class="social-links">
+                              <a href="mailto:utkarshjain1607@gmail.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/utkarsh-jain-6301a6254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/Samruddhi Shinde.jpeg">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">SAMRUDDHI</h3>
+                          <p>Junior engineer</p>
+                          <div class="social-links">
+                              <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/raji1.png">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">RAJNIKANT</h3>
+                          <p>Junior engineer</p>
+                          <div class="social-links">
+                              <a href="mailto:semardynastyrks16514@gmail.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/rajnikant-semar" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+    
+    
+  </div>
+  <div class="cols">
+  <div class="col" ontouchstart="this.classList.toggle('hover');">
+    <div class="container">
+      <div class="front" >
+          <div class="profile-card">
+              <div class="img">
+                  <img src="exoteam2023/jugal.png">
+              </div>
+              <div class="caption">
+                  <h3 style="font-family: 'Bungee';">JUGAL</h3>
+                  <p>Junior engineer</p>
+                  <div class="social-links">
+                      <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+    </div>
+   
+  </div>
+  <div class="col" ontouchstart="this.classList.toggle('hover');">
+    <div class="container">
+      <div class="front" >
+          <div class="profile-card">
+              <div class="img">
+                  <img src="exoteam2023/pranjal.png">
+              </div>
+              <div class="caption">
+                  <h3 style="font-family: 'Bungee';">PRANJAL</h3>
+                  <p>Junior engineer</p>
+                  <div class="social-links">
+                      <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+    </div>
+   
+  </div>
+  <div class="col" ontouchstart="this.classList.toggle('hover');">
+    <div class="container">
+      <div class="front" >
+          <div class="profile-card">
+              <div class="img">
+                  <img src="exoteam2023/atulmech.png">
+              </div>
+              <div class="caption">
+                  <h3 style="font-family: 'Bungee';">ATHUL</h3>
+                  <p>Junior engineer</p>
+                  <div class="social-links">
+                      <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+    </div>
+   
+  </div>
+  <div class="col" ontouchstart="this.classList.toggle('hover');">
+    <div class="container">
+      <div class="front" >
+          <div class="profile-card">
+              <div class="img">
+                  <img src="exoteam2023/_Krishna Nagamwad.jpeg">
+              </div>
+              <div class="caption">
+                  <h3 style="font-family: 'Bungee';">KRISHNA</h3>
+                  <p>Junior engineer</p>
+                  <div class="social-links">
+                      <a href="mailto:krishnanagamwad123@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/krishna-nagamwad-ba9219279?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+    </div>
+   
+  </div>
+  
+  
+</div>
+<div class="cols">
+    <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container">
+          <div class="front" >
+              <div class="profile-card">
+                  <div class="img">
+                      <img src="exoteam2023/Chaithanya.jpeg">
+                  </div>
+                  <div class="caption">
+                      <h3 style="font-family: 'Bungee';">CHAITHANYA</h3>
+                      <p>Junior engineer</p>
+                      <div class="social-links">
+                          <a href="mailto:chaithanyapusapalli@gmail.com"><i class="fas fa-envelope"></i></a>
+                          <a href="https://www.linkedin.com/in/chaithanya-pusapalli-26274b293?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                      </div>
+                      
+                  </div>
+              </div>
+          </div>
+        </div>
+       
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container">
+          <div class="front" >
+              <div class="profile-card">
+                  <div class="img">
+                      <img src="exoteam2023/Udbhav Studio Photo 1 - Rana Udbhav Bhaveshbhai (1).jpeg">
+                  </div>
+                  <div class="caption">
+                      <h3 style="font-family: 'Bungee';">UDBHAV</h3>
+                      <p>Junior engineer</p>
+                      <div class="social-links">
+                          <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                          <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                      </div>
+                      
+                  </div>
+              </div>
+          </div>
+        </div>
+       
+      </div><div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container">
+          <div class="front" >
+              <div class="profile-card">
+                  <div class="img">
+                      <img src="exoteam2023/maayank.png">
+                  </div>
+                  <div class="caption">
+                      <h3 style="font-family: 'Bungee';">MAYANK</h3>
+                      <p>Junior engineer</p>
+                      <div class="social-links">
+                          <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                          <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                      </div>
+                      
+                  </div>
+              </div>
+          </div>
+        </div>
+       
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="container">
+          <div class="front" >
+              <div class="profile-card">
+                  <div class="img">
+                      <img src="exoteam2023/ Ruchika Jain.jpeg">
+                  </div>
+                  <div class="caption">
+                      <h3 style="font-family: 'Bungee';">RUCHIKA</h3>
+                      <p>Junior engineer</p>
+                      <div class="social-links">
+                          <a href="mailto:ruchikajain7754@gmail.com"><i class="fas fa-envelope"></i></a>
+                          <a href="https://www.linkedin.com/in/ruchika-jain-281433258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                      </div>
+                      
+                  </div>
+              </div>
+          </div>
+        </div>
+       
+      </div>
+
+     </div>
+    
+<h1>CONTROLS SUBSYSTEM</h1>
+     <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/saidinesh.png">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">SAI DINESH</h3>
+                          <p>Team Lead</p>
+                          <div class="social-links">
+                              <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/ChaitanyaProfilePic - Chaitanya Katti.jpeg">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">CHAITHANYA</h3>
+                          <p>Team Lead</p>
+                          <div class="social-links">
+                              <a href="mailto:kattichaitanya@gmail.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/chaitanya-katti-773286228" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+    </div>
+    <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/pravenp.png">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">PRAVEEN</h3>
+                          <p>Junior engineer</p>
+                          <div class="social-links">
+                              <a href="mailto:prajapatpraveen144@gmail.com"><i class="fas fa-envelope"></i></a>
+                              <a href="http://www.linkedin.com/in/praveenprajapat" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/Jaswant S.jpeg">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">JASAWANT </h3>
+                          <p>Team Lead</p>
+                          <div class="social-links">
+                              <a href="mailto:jass.sen.kumar@gmail.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/jaswant-s-8a03aa260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app
+                              " target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/praveen.png">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">PRAVEEN VIJAY</h3>
+                          <p>Junior engineer</p>
+                          <div class="social-links">
+                              <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/ssgayatri.png">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">S.S.GAYATHRI</h3>
+                          <p>Junior engineer</p>
+                          <div class="social-links">
+                              <a href="mailto:ssg15072004@gmail.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://in.linkedin.com/in/gayathri-s-s-8b0194256?original_referer=https%3A%2F%2Fwww.google.com%2F" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+    
+    
+  </div>
+  <div class="cols">
+  <div class="col" ontouchstart="this.classList.toggle('hover');">
+    <div class="container">
+      <div class="front" >
+          <div class="profile-card">
+              <div class="img">
+                  <img src="exoteam2023/shikar moondara.png">
+              </div>
+              <div class="caption">
+                  <h3 style="font-family: 'Bungee';">SHIKHAR MOONDRA</h3>
+                  <p>Team Lead</p>
+                  <div class="social-links">
+                      <a href="mailto:moondra.shikhar@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+    </div>
+   
+  </div>
+  <div class="col" ontouchstart="this.classList.toggle('hover');">
+    <div class="container">
+      <div class="front" >
+          <div class="profile-card">
+              <div class="img">
+                  <img src="exoteam2023/_Hardik Khariwal.jpeg">
+              </div>
+              <div class="caption">
+                  <h3 style="font-family: 'Bungee';">Hardik Khariwal </h3>
+                  <p>Team Lead</p>
+                  <div class="social-links">
+                      <a href="mailto:hardikkhariwal122904@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="https://www.linkedin.com/in/hardikkhariwal" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+    </div>
+   
+  </div>
+  <div class="col" ontouchstart="this.classList.toggle('hover');">
+    <div class="container">
+      <div class="front" >
+          <div class="profile-card">
+              <div class="img">
+                  <img src="exoteam2023/barade.png">
+              </div>
+              <div class="caption">
+                  <h3 style="font-family: 'Bungee';">Bharde Akshita </h3>
+                  <p>Team Lead</p>
+                  <div class="social-links">
+                      <a href="mailto:akshithabharde05@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="http://linkedin.com/in/akshita-bharde-985bb825b" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+    </div>
+   
+  </div> <div class="col" ontouchstart="this.classList.toggle('hover');">
+    <div class="container">
+      <div class="front" >
+          <div class="profile-card">
+              <div class="img">
+                  <img src="exoteam2023/rohan.png">
+              </div>
+              <div class="caption">
+                  <h3 style="font-family: 'Bungee';">ROHAN </h3>
+                  <p>Team Lead</p>
+                  <div class="social-links">
+                      <a href="mailto:rohankunchala21@gmail.com"><i class="fas fa-envelope"></i></a>
+                      <a href="
+                      " target="_blank"><i class="fab fa-linkedin"></i></a>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+    </div>
+   
+  </div>
+  
+</div>
+<h1>ELECTRICAL SUBSYSTEM</h1>
+     <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/SUDIP PIC-removebg-preview - Sudip Mondal.png">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">SUDIP Mondal</h3>
+                          <p>Team Lead</p>
+                          <div class="social-links">
+                              <a href="mailto:sudipmondal1310@gmail.com"><i class="fas fa-envelope"></i></a>
+                              <a href="http://www.linkedin.com/in/sudip-mondal-25572320b" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+         
+    </div>
+    <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/atul.png">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">ATUL</h3>
+                          <p>Junior engineer</p>
+                          <div class="social-links">
+                              <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/Ank Kumar Gupta.png">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">kumar gupta</h3>
+                          <p>Junior engineer</p>
+                          <div class="social-links">
+                              <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/ank-kumar-gupta-868668254/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/Sree Baruni.png">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">Sree Baruni</h3>
+                          <p>Junior engineer</p>
+                          <div class="social-links">
+                              <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/nitin.png">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">Nitin</h3>
+                          <p>Junior engineer</p>
+                          <div class="social-links">
+                              <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+    
+    
+  </div>
+
+
+
+</div><h1>BUSINESS SUBSYSTEM</h1>
+<div class="cols">
+   <div class="col" ontouchstart="this.classList.toggle('hover');">
+       <div class="container">
+         <div class="front" >
+             <div class="profile-card">
+                 <div class="img">
+                     <img src="exoteam2023/adasrh.png">
+                 </div>
+                 <div class="caption">
+                     <h3 style="font-family: 'Bungee';">ADARSH V</h3>
+                     <p>Team Lead</p>
+                     <div class="social-links">
+                         <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                         <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                     </div>
+                     
+                 </div>
+             </div>
+         </div>
+       </div>
+      
+     </div>
+     <div class="col" ontouchstart="this.classList.toggle('hover');">
+       <div class="container">
+         <div class="front" >
+             <div class="profile-card">
+                 <div class="img">
+                     <img src="exoteam2023/aboli.png">
+                 </div>
+                 <div class="caption">
+                     <h3 style="font-family: 'Bungee';">ABOLI</h3>
+                     <p>Team Lead</p>
+                     <div class="social-links">
+                         <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                         <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                     </div>
+                     
+                 </div>
+             </div>
+         </div>
+       </div>
+      
+     </div>
+</div>
+<div class="cols">
+   <div class="col" ontouchstart="this.classList.toggle('hover');">
+       <div class="container">
+         <div class="front" >
+             <div class="profile-card">
+                 <div class="img">
+                     <img src="exoteam2023/uday.jpeg">
+                 </div>
+                 <div class="caption">
+                     <h3 style="font-family: 'Bungee';">UDAY SAHU</h3>
+                     <p>Web Developer</p>
+                     <div class="social-links">
+                         <a href="mailto:22b2509@iitb.ac.in"><i class="fas fa-envelope"></i></a>
+                         <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                     </div>
+                     
+                 </div>
+             </div>
+         </div>
+       </div>
+      
+     </div>
+     <div class="col" ontouchstart="this.classList.toggle('hover');">
+       <div class="container">
+         <div class="front" >
+             <div class="profile-card">
+                 <div class="img">
+                     <img src="exoteam2023/vaishnavi.png">
+                 </div>
+                 <div class="caption">
+                     <h3 style="font-family: 'Bungee';">VAISHNAVI</h3>
+                     <p>Business Executive</p>
+                     <div class="social-links">
+                         <a href="mailto:vaishnavisingh9472@gmail.com"><i class="fas fa-envelope"></i></a>
+                         <a href="https://www.linkedin.com/in/vaishnavi-singh-590821258" target="_blank"><i class="fab fa-linkedin"></i></a>
+                     </div>
+                     
+                 </div>
+             </div>
+         </div>
+       </div>
+      
+     </div>
+     <div class="col" ontouchstart="this.classList.toggle('hover');">
+       <div class="container">
+         <div class="front" >
+             <div class="profile-card">
+                 <div class="img">
+                     <img src="exoteam2023/shashant.png">
+                 </div>
+                 <div class="caption">
+                     <h3 style="font-family: 'Bungee';">SHASHANT</h3>
+                     <p>Media n Design</p>
+                     <div class="social-links">
+                         <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                         <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                     </div>
+                     
+                 </div>
+             </div>
+         </div>
+       </div>
+      
+     </div>
+
+
+
+
+<div class="col" ontouchstart="this.classList.toggle('hover');">
+<div class="container">
+ <div class="front" >
+     <div class="profile-card">
+         <div class="img">
+             <img src="exoteam2023/ Kesav Ram.S.jpeg">
+         </div>
+         <div class="caption">
+             <h3 style="font-family: 'Bungee';">KESAV</h3>
+             <p>Business Executive</p>
+             <div class="social-links">
+                 <a href="mailto:thebarmybibliomaniac@gmail.com"><i class="fas fa-envelope"></i></a>
+                 <a href="http://www.linkedin.com/in/kesav-ram-b46803252" target="_blank"><i class="fab fa-linkedin"></i></a>
+             </div>
+             
+         </div>
+     </div>
+ </div>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+</body>
+<footer><style>
+
+  footer {
+    color: #fff;
+    background-image: linear-gradient(90deg, rgb(32, 20, 101) 0%, rgb(70, 12, 12) 100%);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top:5px;
+    border-top-left-radius: 70px;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width:960px) {
+    footer {
+      width: 100%;
+      top: 100px;
+    }
+
+    .main {
+      margin: 50px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .logo {
+      grid-column: 1/3;
+    }
+
+    .office {
+      grid-column: 3/5;
+    }
+    .link {
+      grid-column: 1/3;
+    }
+  }
+
+  @media (max-width:660px) {
+    .main {
+      gap: 5px;
+      margin: 0;
+    }
+
+    .icons {
+      display: flex;
+    }
+
+    .row {
+      grid-column: 1/4;
+    }
+  }
+
+  .manik {
+    width: 120px;
+  }
+  .main {
+    margin: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(4, 1fr );
+  }
+  .row {
+    margin-top: 50px;
+  }
+  .footer-header {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .office-des {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .office a {
+    text-decoration: none;
+    color: #98A8F8;
+  }
+
+  .office a:hover {
+    color: #fff;
+  }
+  .num {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .link-des {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .link-des a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+
+  .link-des a:hover {
+    color: #FB2576;
+    transition: linear 0.3s;
+  }
+
+  .btn-know {
+    text-decoration: none;
+    background-color: #fff;
+    padding: 10px;
+    position: relative;
+    top: 30px;
+    background-color: transparent;
+    border: 1px solid #98A8F8;
+    color: #98A8F8;
+    text-transform: uppercase;
+    border-radius: 10px;
+  }
+
+  .btn-know:hover {
+    color: white; 
+    background-color: #98A8F8;
+    transition: linear 0.3s;
+  }
+
+  .subcribe {
+    display: flex;
+  }
+  input[type=mail] {
+    border: none;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    font-size: 0.8rem;
+  }
+  .sub-icon {
+    margin: 7px;
+    margin-right: 15px;
+    margin-left: 0;
+    font-size: 1.5rem;
+  }
+  .ri-arrow-right-line {
+    margin-left: 0;
+  }
+
+  .icons a {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    align-items: center;
+    font-size: 1.1rem;
+    margin: 2%;
+  }
+
+  .social-icon {
+    position: relative;
+    top:2px;
+  }
+  .icons a:hover {
+    color: #fff;
+    background-color: #FB2576;
+    border-color: #FB2576;
+  }
+
+  .newsletter-des {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
+  hr {
+    width: 90%;
+    margin: 2px auto;
+    opacity: 40%;
+    border: 0.01px solid white;
+  }
+
+  .copyright p {
+    padding: 20px;
+  }
+  .office-des {
+  font-size: 20px; /* Adjust the font size as needed */
+  font-family: 'Roboto', sans-serif; /* Specify Roboto or any other preferred font family */
+}
+</style>
+<main class="main-section">
+    
+</main>
+
+<footer class="footer-sec">
+  <div class="main">
+    <div class="logo row">
+      <div class="footer-header">
+        <img src="team2023files/log01.png" class="manik" alt="">
+      </div>
+      <div class="logo-des">
+         
+          <div class="link-des">
+              <a href="#" class="footer-links">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+                      <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                      <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                  </svg> Call us: 7795270926
+              </a> 
+              <a href="#" class="footer-links">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                    </svg> Email us:exofly@iitb
+              </a>
+              
+          </div>
+          
+          
+        <a href="mailto:teamleaders.exoflyiitb@gmail.com
+
+        " class="btn-know">Mail us</a>
+      </div>
+    </div>
+    <div class="office row">
+      <div class="footer-header">
+        <h3>Location 📍</h3>
+      </div>
+      <div class="office-des">
+        <p>Exofly Lab <br> YP Road,<br>
+          IIT Area, Powai,<br>
+          Mumbai Maharashtra- 400076
+          
+          
+        
+        
+      </div>
+    </div>
+    <div class="link row">
+      <div class="footer-header">
+        <h3>Links</h3>
+      </div>
+      <div class="link-des">
+        <a href="index.html" class="footer-links">Home</a>
+        <a href="index.html" class="footer-links">About</a>
+        <a href="index.html" class="footer-links">Our subsystem</a>
+        <a href="team2023.html" class="footer-links">Team</a>
+        <a href="team2023.html" class="footer-links">Contact</a>
+      </div>
+    </div>
+    <div class="newsletter row">
+      <div class="footer-header">
+        <h3>SIGN UP FOR UPDATES</h3>
+      </div>
+      <div class="newsletter-des">
+        <div class="subcribe"><i class="sub-icon ri-mail-check-fill"></i>
+          <input type="mail" placeholder="your email address" required>
+          <i class="sub-icon ri-arrow-right-line"></i>
+        </div>
+        <div class="icons">
+          <a href="https://www.facebook.com/ExoFlyIITB/"><i class="social-icon ri-facebook-fill"></i></a>
+          <a href="https://www.instagram.com/iitb_exofly/"><i class="social-icon ri-instagram-line"></i></a>
+          <a href="https://www.linkedin.com/company/exofly/"><i class="social-icon ri-linkedin-fill"></i></a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <hr>
+    <p>&copy; 2023 Exofly-IITB. All rights reserved.
+      <br> Designed by <a href="https://www.linkedin.com/in/uday-yennampelly-700969252/" target="_blank"  style="color: white;">Uday Sahu</a>
+    </p>
+    
+
+   
+  </div>
+</footer></footer>
+</html>
