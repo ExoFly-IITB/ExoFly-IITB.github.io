@@ -188,8 +188,8 @@
       -moz-text-fill-color: transparent;
       text-align: center;
      
-      margin-top: 10px; /* Adjust the margin to your preference */
-  margin-bottom: 20px; 
+      margin-top:-10px; /* Adjust the margin to your preference */
+  margin-bottom: 0px; 
     }
    
   
@@ -197,27 +197,29 @@
   /* ... (previous styles) */
   @media screen and (max-width: 600px) {
           .main {
-            justify-content: center; /* Center cards on smaller screens */
+            justify-content: flex-end; /* Center cards on smaller screens */
             padding: 40px;
           }
      
           .profile-card {
-            width: 70%; /* Adjust the width for smaller screens */
-            margin: 0 0 100px; /* Add margin for spacing between cards */
-            height: 65vw
-
-          }
-        }
+        width: 70%; /* Adjust the width for smaller screens */
+        margin: 0 0 100px; /* Add margin for spacing between cards */
+        height: 65vw;
+       
+        right: -16%; /* Align the card to the right within .main */
+    }
+  }
         @media screen and (min-width: 768px) {
      .profile-card {
-       margin: 10px; /* Adjust the margin for larger screens (laptops) */
+      justify-content: flex-start; 
+      justify-content: flex-end;
      }
 
    }
 
    @media screen and (max-width: 767px) {
   .col {
-    margin: -2.9rem -0.1rem; /* Adjust the left margin for smaller screens */
+    margin: -2.1rem -0.1rem; /* Adjust the left margin for smaller screens */
     flex-direction: column; /* Stack elements vertically on smaller screens */
         text-align: center;
   }
@@ -257,7 +259,7 @@ h3{
                 <li class="nav__item"><a href="index.html" class="nav__link">HOME</a></li>
                 <li class="nav__item"><a href="index.html" class="nav__link">ABOUT US</a></li>
                 <li class="nav__item"><a href="index.html" class="nav__link">OUR SUBSYSTEMS</a></li>
-                <li class="nav__item"><a href="index.html" class="nav__link">TEAM</a></li>
+                <li class="nav__item"><a href="team2023.html" class="nav__link">TEAM</a></li>
                 <li class="nav__item"><a href="index.html" class="nav__link">CONTACT</a></li>
             </ul>
         </div>
@@ -825,123 +827,6 @@ h3{
    
   </div>
   
-</div>
-<h1>ELECTRICAL SUBSYSTEM</h1>
-     <div class="cols">
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-              <div class="front" >
-                  <div class="profile-card">
-                      <div class="img">
-                          <img src="exoteam2023/SUDIP PIC-removebg-preview - Sudip Mondal.png">
-                      </div>
-                      <div class="caption">
-                          <h3 style="font-family: 'Bungee';">SUDIP Mondal</h3>
-                          <p>Team Lead</p>
-                          <div class="social-links">
-                              <a href="mailto:sudipmondal1310@gmail.com"><i class="fas fa-envelope"></i></a>
-                              <a href="http://www.linkedin.com/in/sudip-mondal-25572320b" target="_blank"><i class="fab fa-linkedin"></i></a>
-                          </div>
-                          
-                      </div>
-                  </div>
-              </div>
-            </div>
-           
-          </div>
-         
-    </div>
-    <div class="cols">
-        <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-              <div class="front" >
-                  <div class="profile-card">
-                      <div class="img">
-                          <img src="exoteam2023/atul.png">
-                      </div>
-                      <div class="caption">
-                          <h3 style="font-family: 'Bungee';">ATUL</h3>
-                          <p>Junior engineer</p>
-                          <div class="social-links">
-                              <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
-                              <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
-                          </div>
-                          
-                      </div>
-                  </div>
-              </div>
-            </div>
-           
-          </div>
-          <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-              <div class="front" >
-                  <div class="profile-card">
-                      <div class="img">
-                          <img src="exoteam2023/Ank Kumar Gupta.png">
-                      </div>
-                      <div class="caption">
-                          <h3 style="font-family: 'Bungee';">kumar gupta</h3>
-                          <p>Junior engineer</p>
-                          <div class="social-links">
-                              <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
-                              <a href="https://www.linkedin.com/in/ank-kumar-gupta-868668254/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                          </div>
-                          
-                      </div>
-                  </div>
-              </div>
-            </div>
-           
-          </div>
-          <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-              <div class="front" >
-                  <div class="profile-card">
-                      <div class="img">
-                          <img src="exoteam2023/Sree Baruni.png">
-                      </div>
-                      <div class="caption">
-                          <h3 style="font-family: 'Bungee';">Sree Baruni</h3>
-                          <p>Junior engineer</p>
-                          <div class="social-links">
-                              <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
-                              <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
-                          </div>
-                          
-                      </div>
-                  </div>
-              </div>
-            </div>
-           
-          </div>
-          <div class="col" ontouchstart="this.classList.toggle('hover');">
-            <div class="container">
-              <div class="front" >
-                  <div class="profile-card">
-                      <div class="img">
-                          <img src="exoteam2023/nitin.png">
-                      </div>
-                      <div class="caption">
-                          <h3 style="font-family: 'Bungee';">Nitin</h3>
-                          <p>Junior engineer</p>
-                          <div class="social-links">
-                              <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
-                              <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
-                          </div>
-                          
-                      </div>
-                  </div>
-              </div>
-            </div>
-           
-          </div>
-    
-    
-  </div>
-
-
-
 </div><h1>BUSINESS SUBSYSTEM</h1>
 <div class="cols">
    <div class="col" ontouchstart="this.classList.toggle('hover');">
@@ -1076,6 +961,124 @@ h3{
 </div>
 
 </div>
+</div>
+
+<h1>ELECTRICAL SUBSYSTEM</h1>
+     <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/SUDIP PIC-removebg-preview - Sudip Mondal.png">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">SUDIP Mondal</h3>
+                          <p>Team Lead</p>
+                          <div class="social-links">
+                              <a href="mailto:sudipmondal1310@gmail.com"><i class="fas fa-envelope"></i></a>
+                              <a href="http://www.linkedin.com/in/sudip-mondal-25572320b" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+         
+    </div>
+    <div class="cols">
+        <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/atul.png">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">ATUL</h3>
+                          <p>Junior engineer</p>
+                          <div class="social-links">
+                              <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/Ank Kumar Gupta.png">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">kumar gupta</h3>
+                          <p>Junior engineer</p>
+                          <div class="social-links">
+                              <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/ank-kumar-gupta-868668254/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/Sree Baruni.png">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">Sree Baruni</h3>
+                          <p>Junior engineer</p>
+                          <div class="social-links">
+                              <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+          <div class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="container">
+              <div class="front" >
+                  <div class="profile-card">
+                      <div class="img">
+                          <img src="exoteam2023/nitin.png">
+                      </div>
+                      <div class="caption">
+                          <h3 style="font-family: 'Bungee';">Nitin</h3>
+                          <p>Junior engineer</p>
+                          <div class="social-links">
+                              <a href="mailto:your@email.com"><i class="fas fa-envelope"></i></a>
+                              <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+            </div>
+           
+          </div>
+    
+    
+  </div>
+
+
+
 </div>
 
 
