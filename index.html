@@ -82,7 +82,26 @@
 body {
             background-color: black;
             color: white; /* Set text color to white for better visibility on a black background */
+
         }
+
+        @media only screen and (max-width: 600px) {
+        .mobile-iframe {
+            height: 1650px; /* Set the desired height for mobile screens */
+            margin-top: -130px;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+    .img-fluid {
+        display: none;
+    }
+}
+
+#mo {
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+    height: auto; /* Maintain aspect ratio */
+}
 </style>
 </head>
 
@@ -97,7 +116,7 @@ body {
       <div class="logo" id="mo1">
        
         
-        <a href="index.html"><img src="assets/img/team/log0.png" alt="" class="img-fluid" id="mo"></a>
+        <a href="index.html"><img src="team2023files/log0-removebg-preview (1).png" alt="" class="img-fluid" id="mo"></a>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -466,7 +485,7 @@ body {
 
   </main><!-- End #main -->
 
-  <iframe src="footer.html" frameborder="0" width="100%" height="495"></iframe>
+  <iframe src="footer.html" frameborder="0" width="100%" height="495" class="mobile-iframe"></iframe>
       
 
       
