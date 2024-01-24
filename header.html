@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="team2023files/nav2023.css">
+      
+     
+    
+      
+      
+      <style>
+      /* Reset styles for all elements */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Exo', sans-serif;
+        
+      }
+      
+      /* Wrapper for centering content */
+      .wrapper {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 80rem;
+      }
+      
+      /* Flex container for columns */
+      .cols {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      
+      /* Individual column style */
+      .col {
+        width: calc(20% - 2rem);
+        margin: 2rem;
+        cursor: pointer;
+      }
+      
+    
+      /* Media query for adjusting column width on smaller screens */
+      @media screen and (max-width: 48rem) {
+        .col {
+          width: calc(50% - 2rem);
+        }
+      }
+      
+      /* Media query for making columns full width on even smaller screens */
+      @media screen and (max-width: 32rem) {
+        .col {
+          width: 100%;
+          margin: 0 0 2rem 0;
+        }
+      }
+      
+      /* Hide the back side of the card by default */
+     
+      
+      /* Global styles for fonts and box-sizing */
+     
+      
+      /* Font face for custom font */
+      @font-face {
+        font-family: 'Exo';
+        src: url(./fonts/Exo2.0-Medium.otf);
+      }
+      
+      /* Styles for the main container holding profile cards */
+      .main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        
+        padding: 200px;
+      }
+      
+      /* Styles for individual profile cards */
+      .profile-card {
+        position: relative;
+        font-family: sans-serif;
+        width: 220px;
+        height: 220px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 50%;
+        box-shadow: 0 0 22px #3336;
+        transition: .6s;
+        margin: 0px;
+      }
+      
+      /* Hover effect on profile cards */
+      .profile-card:hover {
+        border-radius: 10px;
+        height: 260px;
+      }
+      
+      /* Styles for the profile image within a card */
+      .profile-card .img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: .6s;
+        z-index: 99;
+      }
+      
+      /* Hover effect on the profile image */
+      .profile-card:hover .img {
+        transform: translateY(-60px);
+      }
+      
+      /* Styles for the actual image inside the profile image container */
+      .img img {
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 0 0 22px #3336;
+        transition: .6s;
+      }
+      
+      /* Hover effect on the image inside the profile card */
+      .profile-card:hover img {
+        border-radius: 10px;
+      }
+      
+      /* Styles for the caption (name, role, and social links) on a profile card */
+      .caption {
+        text-align: center;
+        transform: translateY(-80px);
+        opacity: 0;
+        transition: .6s;
+      }
+      
+      /* Hover effect on the caption */
+      .profile-card:hover .caption {
+        opacity: 1;
+      }
+      
+      /* Styles for the name in the caption */
+      .caption h3 {
+        font-size: 21px;
+        font-family: sans-serif;
+      }
+      
+      /* Styles for the role in the caption */
+      .caption p {
+        font-size: 15px;
+        color: #0c52a1;
+        font-family: sans-serif;
+        margin: 2px 0 9px 0;
+      }
+      
+      /* Styles for social links in the caption */
+      .caption .social-links a {
+        color: #333;
+        margin-right: 15px;
+        font-size: 21px;
+        transition: .6s;
+      }
+      
+      /* Hover effect on social links */
+      .social-links a:hover {
+        color: #0c52a1;
+      }
+      
+      /* Media query for adjusting styles on smaller screens */
+      h1 {
+          text-transform: capitalize;
+          letter-spacing: 0.3px;
+          font-family: "Roboto", sans-serif;
+          font-weight: 700;
+          font-size: clamp(2.9375rem, 2.75rem + 0.75vw, 3rem);
+          background-color: #005baa;
+          background-image: linear-gradient(40deg, #005baa, #47105f);
+          background-size: 100%;
+          background-repeat: repeat;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          -moz-background-clip: text;
+          -moz-text-fill-color: transparent;
+          text-align: center;
+         
+          margin-top:-10px; /* Adjust the margin to your preference */
+      margin-bottom: 0px; 
+        }
+       
+      
+      
+      /* ... (previous styles) */
+      @media screen and (max-width: 600px) {
+              .main {
+                justify-content: flex-end; /* Center cards on smaller screens */
+                padding: 40px;
+              }
+         
+              .profile-card {
+            width: 70%; /* Adjust the width for smaller screens */
+            margin: 0 0 100px; /* Add margin for spacing between cards */
+            height: 65vw;
+           
+            right: -16%; /* Align the card to the right within .main */
+        }
+      }
+            @media screen and (min-width: 768px) {
+         .profile-card {
+          justify-content: flex-start; 
+          justify-content: flex-end;
+         }
+    
+       }
+    
+       @media screen and (max-width: 767px) {
+      .col {
+        margin: -2.1rem -0.1rem; /* Adjust the left margin for smaller screens */
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+            text-align: center;
+      }
+    }
+       
+    .wrapper {
+      text-align: center; /* Center align the content */
+    }
+    
+    h1 {
+      margin-bottom: 55px; /* Add some margin to separate the heading from the columns */
+    }
+    
+    h3{
+        font-family: 'Bungee';
+    }
+    .l-header {
+                transition: background-color 0.5s, opacity 0.5s;
+            }
+    
+            .nav__menu {
+                opacity: 1;
+            }
+    </style>  
+    
+    </head>
+<body>
+    <div>
+        <header class="l-header">
+          <nav class="nav bd-grid">
+              <div>
+                  <a href="team2023files/log0.png" class="nav__logo">EXOFLY-IITB</a>
+                  
+              </div>
+              <div class="nav__menu" id="nav-menu">
+                  <ul class="nav__list">
+                      <li class="nav__item"><a href="index.html" class="nav__link">HOME</a></li>
+                      <li class="nav__item"><a href="index.html" class="nav__link">ABOUT US</a></li>
+                      <li class="nav__item"><a href="index.html" class="nav__link">OUR SUBSYSTEMS</a></li>
+                      <li class="nav__item"><a href="team2023.html" class="nav__link">TEAM</a></li>
+                      <li class="nav__item"><a href="index.html" class="nav__link">CONTACT</a></li>
+                  </ul>
+              </div>
+              <div class="nav__toggle" id="nav-toggle">
+                  <ion-icon class="nav__icon" name="menu"></ion-icon>
+              </div>
+          </nav>
+      </header>
+      <script  type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+      
+              <!-- MAIN JS -->
+              <script src="team2023files/nav.js"></script>
+      </div>
+</body>
+</html>

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -22,6 +23,7 @@ main {
   z-index: -1;
   opacity: 0;
 }
+
 .bg2 {
   position: fixed;
   bottom: -2rem;
@@ -30,7 +32,6 @@ main {
   width: 9.375rem;
   opacity: 0;
 }
-
 
 main > div span {
   text-transform: uppercase;
@@ -159,107 +160,34 @@ main > div > a:hover {
 }
 
 .swiper-slide--one {
-  position: relative;
-  background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("https://images.unsplash.com/photo-1628944682084-831f35256163?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80")
+      no-repeat 50% 50% / cover;
 }
-
-.swiper-slide--one .video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.7; /* Adjust opacity as needed */
-}
-
-.swiper-slide--one .content {
-  position: relative;
-  z-index: 1;
-  padding: 20px;
-  color: #fff; /* Adjust text color as needed */
-}
-
-
-
-/* Rest of your CSS styles for .content and other elements */
-
-
-
 
 .swiper-slide--two {
-  position: relative;
-  background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
-}
-
-.swiper-slide--two .video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.7; /* Adjust opacity as needed */
-}
-
-.swiper-slide--two .content {
-  position: relative;
-  z-index: 1;
-  padding: 20px;
-  color: #fff; /* Adjust text color as needed */
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("https://images.unsplash.com/photo-1515309025403-4b0184873cef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80")
+      no-repeat 50% 50% / cover;
 }
 
 .swiper-slide--three {
-  position: relative;
-  background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("https://images.unsplash.com/photo-1545671913-b89ac1b4ac10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+      no-repeat 50% 50% / cover;
 }
-
-.swiper-slide--three .video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.7; /* Adjust opacity as needed */
-}
-
-.swiper-slide--three .content {
-  position: relative;
-  z-index: 1;
-  padding: 20px;
-  color: #fff; /* Adjust text color as needed */
-}
-
 
 .swiper-slide--four {
-  position: relative;
-  background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("https://images.unsplash.com/photo-1598977123118-4e30ba3c4f5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+      no-repeat 50% 50% / cover;
 }
 
-.swiper-slide--four .video-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-  opacity: 0.7; /* Adjust opacity as needed */
+.swiper-slide--five {
+  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
+    url("https://images.unsplash.com/photo-1570481662006-a3a1374699e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80")
+      no-repeat 50% 50% / cover;
 }
-
-.swiper-slide--four .content {
-  position: relative;
-  z-index: 1;
-  padding: 20px;
-  color: #fff; /* Adjust text color as needed */
-}
-
-
-
 
 .swiper-3d .swiper-slide-shadow-left,
 .swiper-3d .swiper-slide-shadow-right {
@@ -271,18 +199,14 @@ main > div > a:hover {
     display: flex;
     align-items: center;
   }
-
   .bg,
-.bg2 {
+  .bg2 {
     opacity: 0.1;
   }
 }
+
 @media screen and (min-width: 93.75rem) {
   .swiper {
     width: 85%;
   }
-}
-
-.video-background {
-  pointer-events: none;
 }
