@@ -16,8 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 <link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/phone.css">
-<link rel="icon" href="exologofly.jpeg" type="image/x-icon">
-    <link rel="shortcut icon" href="team2023files/log0.png" type="image/x-icon">
+
 
 
 
@@ -25,9 +24,6 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-  <link href="assets/logos/remove_bg.png" rel="icon">
-  <link href="exologofly.jpeg" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -42,6 +38,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="icon" href="exologofly.jpeg" type="image/x-icon">
+  <link rel="shortcut icon" href="exologofly.jpeg" type="image/x-icon">
 
 
 <script src="index.js"></script>
@@ -118,7 +116,8 @@ body {
       <div class="logo" id="mo1">
        
         
-        <a href="index.html"><img src="team2023files/log01.png" alt="" class="img-fluid" id="mo"></a>
+        <a href="index.html" style="margin-left: 10px;"><img src="team2023files/log01.png" alt="" class="img-fluid" id="mo"></a>
+
       </div>
 
       <nav id="navbar" class="navbar">
@@ -222,7 +221,21 @@ body {
 
     <!-- ======= Steps Section ======= -->
     <section >
-      <iframe id="exoflyIframe" src="exooflysubsystem/dist/exoflysubsystem.html" frameborder="0"></iframe>
+      <iframe id="exoflyIframe" src="exooflysubsystem/dist/exoflysubsystem.html" width="100%" height="1000" frameborder="0"></iframe>
+
+      <script>
+        // Adjust the height of the iframe based on its content
+        function adjustIframeHeight() {
+          var iframe = document.getElementById("exoflyIframe");
+          if (iframe) {
+            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + "px";
+          }
+        }
+      
+        // Call the function when the content inside the iframe has loaded
+        document.getElementById("exoflyIframe").onload = adjustIframeHeight;
+      </script>
+      
   </section>
   
       </div>
@@ -487,7 +500,7 @@ body {
 
   </main><!-- End #main -->
 
-  <iframe src="footer.html" frameborder="0" width="100%" height="495" class="mobile-iframe"></iframe>
+  <iframe src="footer.html" frameborder="0" width="100%" height="585" class="mobile-iframe"></iframe>
       
 
       
