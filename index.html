@@ -106,7 +106,18 @@ body {
 </head>
 
 <body>
-  <div id="loader"></div>
+  <div id="loader"> <h1>WELCOME</h1>
+    <h1>TO EXOFLY</h1>
+    <h1>WE AIM TO FLY</h1> </div>
+    <script>function loaderAnimation() {
+      var loader = document.querySelector("#loader");
+      setTimeout(function () {
+          loader.style.top = "-100%";
+      }, 4200);
+  }
+  
+  loaderAnimation();
+  </script>
   <div id="content">
 
   <!-- ======= Header ======= -->
