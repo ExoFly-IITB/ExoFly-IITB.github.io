@@ -52,13 +52,7 @@
    })();
 </script>
 
-  <!-- =======================================================
-  * Template Name: Maxim - v4.10.0
-  * Template URL: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-  <!-- Google tag (gtag.js) -->
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTC3KNFKQZ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -192,12 +186,40 @@ body {
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="container text-center text-md-left" data-aos="fade-up">
-      <h1>Welcome to ExoFly <br>
-        <p class="abc">We aim to Fly!</p></h1>
-      
-      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        <style>
+            #hero > h1,
+            #hero > p {
+                /* Common styles for both mobile and laptop screens */
+            }
+
+            @media (max-width: 767px) {
+                #hero > h1, #hero > p {
+                    /* Styles for mobile screens */
+                    margin-bottom: 10px; /* Adjust as needed */
+                }
+            }
+
+            @media (min-width: 768px) {
+                #hero > h1 {
+                    /* Styles for laptop screens */
+                    margin-top: 130px; /* Adjust as needed */
+                }
+
+                #hero > p {
+                    /* Styles for laptop screens */
+                    margin-top: 100px; /* Adjust as needed */
+                }
+            }
+        </style>
+        
+        <h1>Welcome to ExoFly <br>
+            <p class="abc">We aim to Fly!</p>
+        </h1>
+
+        <a href="#about" class="btn-get-started scrollto">Explore More</a>
     </div>
-  </section>
+</section>
+
   <!-- End Hero -->
   <div style="height:50px"></div>
 

@@ -286,3 +286,19 @@ main > div > a:hover {
 .video-background {
   pointer-events: none;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  transform: translateY(0);
+  transition: transform 0.5s ease-out;
+}
+
+body.scrolling-down {
+  transform: translateY(-100%);
+}
+

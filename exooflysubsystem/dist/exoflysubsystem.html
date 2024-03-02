@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>exoflysubsystem1</title>
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'><link rel="stylesheet" href="./style.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+
 
 </head>
 <body>
@@ -22,7 +26,7 @@
         
         <!-- Video Background -->
         <video loop autoplay muted class="video-background">
-          <source src="Circuit Board Background.mp4" type="video/mp4">
+          <source src="Circuit Board Background1 (12) (1).mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       
@@ -38,7 +42,7 @@
       <div class="swiper-slide swiper-slide--two">
         <!-- Video Background -->
         <video loop autoplay muted class="video-background">
-          <source src="houdini16 procedural modeling and animation electronic circuit 2.mp4" type="video/mp4">
+          <source src="houdini17 procedural modeling and animation electronic circuit (1) (1).mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       
@@ -54,7 +58,7 @@
       <div class="swiper-slide swiper-slide--three">
         <!-- Video Background -->
         <video loop autoplay muted class="video-background">
-          <source src="SOLIDWORKS Visualize - Bebop 2 Exploded View Animation (2).mp4" type="video/mp4">
+          <source src="sssolidworks-visualize-bebop-2-exploded-view-animation-2-1_FXCqAUcb.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       
@@ -68,7 +72,7 @@
       <div class="swiper-slide swiper-slide--four">
         <!-- Video Background -->
         <video loop autoplay muted class="video-background">
-          <source src="businessexofly.mp4" type="video/mp4">
+          <source src="businessexofly-1-1_XcC2KaHj (1).mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       
@@ -79,59 +83,90 @@
         </div>
       </div>
       
-  
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          // Get all video elements
+          var videos = document.querySelectorAll(".video-background");
+      
+          // Set the desired playback rate for all videos (e.g., 1.5 for 1.5x speed)
+          var playbackRate = 3.5;
+      
+          // Loop through each video and set the playback rate
+          videos.forEach(function(video) {
+            video.playbackRate = playbackRate;
+          });
+        });
+      </script>
+      
 
   
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
   </div>
-  <img src="city-8030116.png" alt="" class="bg">
-  <img src="fractal-1280079.jpeg" alt="" class="bg2">
+ 
 </main>
 <!-- partial -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-  // Initialize Swiper
-var swiper = new Swiper(".swiper", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 0,
-    depth: 100,
-    modifier: 3,
-    slideShadows: true,
-  },
-  keyboard: {
-    enabled: true,
-  },
-  mousewheel: {
-    thresholdDelta: 70,
-  },
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    640: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 1,
-    },
-    1024: {
-      slidesPerView: 2,
-    },
-    1560: {
-      slidesPerView: 3,
-    },
-  },
-});
+  document.addEventListener("DOMContentLoaded", function () {
+    var isScrolling = false;
 
+    // Initialize Swiper
+    var swiper = new Swiper(".swiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 3,
+        slideShadows: true,
+      },
+      keyboard: {
+        enabled: true,
+      },
+      mousewheel: {
+        invert: false,
+        sensitivity: 1,
+        eventsTarged: '.swiper-container', // Specify the container for mousewheel events
+      },
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 1,
+        },
+        1024: {
+          slidesPerView: 2,
+        },
+        1560: {
+          slidesPerView: 3,
+        },
+      },
+    });
 
+    // Additional scroll event handling
+    window.addEventListener("scroll", function () {
+      isScrolling = true;
+    });
+
+    setInterval(function () {
+      if (isScrolling) {
+        window.scrollTo(0, window.pageYOffset + 1);
+        isScrolling = false;
+      }
+    }, 15); // Adjust the interval as needed
+  });
 </script>
+
+
 
 </body>
 </html>

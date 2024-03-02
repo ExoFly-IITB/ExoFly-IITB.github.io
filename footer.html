@@ -206,6 +206,12 @@
     .office-des {
     font-size: 20px; /* Adjust the font size as needed */
     font-family: 'Roboto', sans-serif; /* Specify Roboto or any other preferred font family */
+    .row {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
   }
   </style>
   <title>Document</title>
@@ -261,10 +267,23 @@
         " class="btn-know">Mail us</a>
       </div>
     </div>
+    <style>
+      .office.row {
+        margin-left: 510px; /* Adjust the value as needed */
+    
+        @media only screen and (max-width: 600px) {
+          /* Adjust the max-width value based on your design needs */
+          margin-left: 10px; /* Adjust the value as needed for mobile screens */
+          margin-right: 10px; /* Optional: Add some right margin for better spacing */
+        }
+      }
+    </style>
     <div class="office row">
       <div class="footer-header">
-        <h3>Location 📍</h3>
+        <h3 style="display: inline-block; margin-right: 5px;">Location</h3>
+       
       </div>
+      
       <div class="office-des">
         <p>Exofly,IC engine  Lab,N4 Bay <br>
           IIT  Powai,<br>
@@ -275,6 +294,20 @@
         
       </div>
     </div>
+    <style>
+      .link.row {
+        margin-left: 20px; /* Adjust the value as needed */
+      }
+    
+      @media only screen and (max-width: 600px) {
+        /* Adjust the max-width value based on your design needs */
+        .link.row {
+          margin-left: 10px; /* Adjust the value as needed for mobile screens */
+      margin-right: 10px; 
+        }
+      }
+    </style>
+    
     <div class="link row">
       <div class="footer-header">
         <h3>Links</h3>
@@ -285,28 +318,35 @@
         <a href="index.html" class="footer-links" target="_blank">Our subsystem</a>
         <a href="team2023.html" class="footer-links" target="_blank">Team</a>
         <a href="team2023.html" class="footer-links" target="_blank">Contact</a>
+      </div>
     </div>
     
+  
     </div>
-    <div class="newsletter row">
-      <div class="footer-header">
-        <h3>SIGN UP FOR UPDATES</h3>
-      </div>
-      <div class="newsletter-des">
-        <div class="subcribe"><i class="sub-icon ri-mail-check-fill"></i>
-          <input type="mail" placeholder="your email address" required>
-          <i class="sub-icon ri-arrow-right-line"></i>
-        </div>
-        <div class="icons">
-          <a href="https://www.facebook.com/ExoFlyIITB/" target="_blank"><i class="social-icon ri-facebook-fill"></i></a>
-          <a href="https://www.instagram.com/iitb_exofly/" target="_blank"><i class="social-icon ri-instagram-line"></i></a>
-          <a href="https://www.linkedin.com/company/exofly/" target="_blank"><i class="social-icon ri-linkedin-fill"></i></a>
-      </div>
-      
-      </div>
+   
+   
+    <style>
+      .icons {
+        margin-left: 876px; /* Adjust the value as needed */
+      }
+    
+      @media only screen and (max-width: 600px) {
+        /* Adjust the max-width value based on your design needs */
+        .icons {
+          margin-left: 34px; /* Adjust the value as needed for mobile screens */
+      margin-right: 10px; 
+        }
+      }
+    </style>
+    
+    <div class="icons" style="margin-top: -65px;">
+        <a href="https://www.facebook.com/ExoFlyIITB/" target="_blank"><i class="social-icon ri-facebook-fill"></i></a>
+        <a href="https://www.instagram.com/iitb_exofly/" target="_blank"><i class="social-icon ri-instagram-line"></i></a>
+        <a href="https://www.linkedin.com/company/exofly/" target="_blank"><i class="social-icon ri-linkedin-fill"></i></a>
     </div>
-  </div>
-  <div class="copyright">
+    
+   <div>
+  <div class="copyright" style="margin-top: 20px;">
     <hr>
     <p>&copy; 2023 Exofly-IITB. All rights reserved.
       <br> Designed by <a href="https://www.linkedin.com/in/uday-yennampelly-700969252/" target="_blank"  style="color: white;">Uday Sahu</a>
@@ -314,6 +354,7 @@
     
 
    
+  </div>
   </div>
 </footer>
 
