@@ -113,6 +113,7 @@
 
     // Initialize Swiper
     var swiper = new Swiper(".swiper", {
+      
       effect: "coverflow",
       grabCursor: true,
       centeredSlides: true,
@@ -129,7 +130,7 @@
       mousewheel: {
         invert: false,
         sensitivity: 1,
-        eventsTarged: '.swiper-container', // Specify the container for mousewheel events
+        eventsTarged: '.swiper-wrapper', // Specify the container for mousewheel events
       },
       loop: true,
       pagination: {
