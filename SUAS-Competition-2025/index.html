@@ -1,33 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SUAS Competition</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Scroll Video Reveal</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="hero">
-    <h1>SUAS Competition</h1>
-    <p>Autonomous aerial systems in action</p>
-  </section>
+  <div class="video-container">
+    <video id="bgVideo" src="assets/background.mp4" muted></video>
+  </div>
 
-  <section class="section fade-in">
-    <h2>Mission Overview</h2>
-    <p>Our drone autonomously navigates to perform surveillance and delivery.</p>
-  </section>
-
-  <section class="section slide-in">
-    <h2>Flight Performance</h2>
-    <p>Achieved sub-meter accuracy in GPS-based waypoint following.</p>
-  </section>
-
-  <section class="section scale-in">
-    <h2>Object Detection</h2>
-    <p>Real-time onboard vision-based target acquisition using YOLOv8.</p>
-  </section>
+  <div class="scroll-wrapper">
+    <div class="content">
+      <h1>SUAS Competition</h1>
+      <p>Scroll to explore our drone's journey</p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

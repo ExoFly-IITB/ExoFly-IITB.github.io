@@ -1,40 +1,22 @@
-gsap.registerPlugin(ScrollTrigger);
+const video = document.getElementById("bgVideo");
 
-gsap.utils.toArray(".fade-in").forEach(elem => {
-  gsap.to(elem, {
-    opacity: 1,
-    y: 0,
-    duration: 1.2,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: elem,
-      start: "top 80%",
-      toggleActions: "play none none none"
-    }
+// Wait until the video metadata is loaded
+video.addEventListener("loadedmetadata", () => {
+  const duration = video.duration;
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+
+    // Normalize scroll position to [0, duration]
+    const scrollFraction = scrollTop / maxScroll;
+    const videoTime = scrollFraction * duration;
+
+    video.currentTime = videoTime;
+
+    // Reveal more of the video vertically (animate the bottom edge of the mask)
+    const revealFraction = Math.min(scrollFraction * 100, 100);
+    document.querySelector(".video-container").style.clipPath =
+      `inset(0 0 ${100 - revealFraction}% 0)`;
   });
-});
-
-gsap.utils.toArray(".slide-in").forEach(elem => {
-  gsap.to(elem, {
-    opacity: 1,
-    x: 0,
-    duration: 1.2,
-    x: -50,
-    scrollTrigger: {
-      trigger: elem,
-      start: "top 85%",
-      toggleActions: "play none none none"
-    }
-  });
-});
-
-gsap.utils.toArray(".scale-in").forEach(elem => {
-  gsap.fromTo(elem, 
-    { scale: 0.8, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 1.2, scrollTrigger: {
-        trigger: elem,
-        start: "top 85%",
-        toggleActions: "play none none none"
-      }
-    });
 });
