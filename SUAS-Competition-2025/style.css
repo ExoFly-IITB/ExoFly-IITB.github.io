@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #111;
+  color: white;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  background: linear-gradient(120deg, #00c6ff, #0072ff);
+  text-align: center;
+  color: white;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+h1, h2 {
+  margin: 0 0 10px;
+}
+
+p {
+  max-width: 600px;
+  text-align: center;
+}
